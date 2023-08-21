@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  httpbin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6380:6379"
